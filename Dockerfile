@@ -6,7 +6,7 @@ RUN npm install -g grunt-cli
 RUN npm install -g gulp
 
 RUN useradd -ms /bin/bash node
-RUN chown -R node.node /home/node
+RUN chown -R node.node /home/node & chmod -R 777 /home/node
 
 USER node
 ENV HOME /home/node
