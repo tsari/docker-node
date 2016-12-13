@@ -1,10 +1,8 @@
 # docker-node
-node, bower, grunt, gulp for dependency management
+Dockerized node version with entrypoint that really cares about user rights. Not only for single user computer with uid 1000.
 
 ### usage
+Copy the node "binary" to a directory that's in your PATH.
+Then use it like node.
 
-    getent passwd > $HOME/.mypasswd && \
-    getent group > $HOME/.mygroup && \
-    sudo docker run --rm -it -v $PWD:/app -u $USER -v $HOME/.mypasswd:/etc/passwd:ro -v $HOME/.mygroup:/etc/group:ro tsari/node npm "$@"
-
-    This is a very hacky way to use this container. But with this you will work wih the correct user rights in the mounted volume.
+`node -v`
