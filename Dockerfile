@@ -1,4 +1,4 @@
-FROM node:6.9.2
+FROM node:7.2.1
 MAINTAINER Tibor Sári <tiborsari@gmx.de>
 
 RUN \
