@@ -1,0 +1,10 @@
+#!/bin/bash
+docker run -it --rm \
+    -e "HOME" \
+    -e "USER" \
+    -e "UID=$(id -u)" \
+    -e "GID=$(id -g)" \
+    -v /home/$USER:/home/$USER \
+    -v $PWD:/app \
+    --net="host" \
+tsari/node yarn "$@"
