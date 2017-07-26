@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:8.2.1
 MAINTAINER Tibor Sári <tiborsari@gmx.de>
 
 RUN \
